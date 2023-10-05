@@ -1,0 +1,28 @@
+
+\section{Data Collection}
+
+To build the network we needed information on the votes of individual members of the Chamber. This kind of information is available starting from the XVII legislature (to 28 April 2023).
+
+
+\subsection{Selected Data Sources}
+
+Our main source of data is the official website of the Italian Chamber of Deputies. \footnote{\url{https://dati.camera.it/sparql}}
+
+
+
+\subsubsection{Crawling Methodology and Assumptions}
+
+To collect data we used a series of queries which, given a certain voting day, crawled the votes expressed by different members of the Chamber.
+ To make it easier for our analysis, we aggregated the votes using different timescales, collecting a series of datasets for each of the following:
+
+\begin{enumerate}
+\item Votes for each legislature (XVII and XVIII).
+\item Votes for each year (if a year falls in between two legislatures, we divide the dataset in two).
+\item Votes for each month.
+\end{enumerate}
+
+\subsubsection{Preprocessing}
+
+Our datasets showed that many Deputies were constantly absent from voting sessions. We decided to exclude them from our analysis since they would have mainly contributed to noise.\\
+
+Specifically, we eliminated the Deputies which were absent in more than 70\% of the votings. 

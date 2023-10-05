@@ -1,0 +1,4 @@
+- The _Stream_save_edgelist.ipynb_ creates edgelist files that can be used to create the stream graph
+- In _Stream_graph_analysis_xvii.ipynb_ and _Stream_graph_analysis_xviii.ipynb_ we calculate monthly properties of the network, and save them into _.npy_ arrays.
+- In _PartyDiscipline_StreamG.ipynb_ we calculate the average party discipline for each month
+- In _stream_mean_values.ipynb_ we aggregate data from the two legislatures and make plots

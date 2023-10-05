@@ -1,0 +1,100 @@
+%
+% The first command in your LaTeX source must be the \documentclass command.
+\documentclass[sigchi]{acmart}
+
+\usepackage{subcaption}
+\usepackage{graphicx} 
+%
+% defining the \BibTeX command - from Oren Patashnik's original BibTeX documentation.
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08emT\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+    
+% Rights management information. 
+% This information is sent to you when you complete the rights form.
+% These commands have SAMPLE values in them; it is your responsibility as an author to replace
+% the commands and values with those provided to you when you complete the rights form.
+%
+% These commands are for a PROCEEDINGS abstract or paper.
+\copyrightyear{2023}
+\acmYear{2023}
+\setcopyright{acmlicensed}
+\acmConference[SNA '23]{Social Network Analysis '23}{2022/23}{University of Pisa, Italy}
+\acmBooktitle{Social Network Analysis '23}
+\acmPrice{0.00}
+%\acmDOI{10.1145/1122445.1122456}
+%\acmISBN{978-1-4503-9999-9/18/06}
+%\documentclass[xcolor=table]{beamer}
+
+
+% end of the preamble, start of the body of the document source.
+\begin{document}
+
+%
+% The "title" command has an optional parameter, allowing the author to define a "short title" to be used in page headers.
+\title{Italian Chamber of Deputies \\ through a Social Network Perspective}
+
+% The "author" command and its associated commands are used to define the authors and their affiliations.
+% Of note is the shared affiliation of the first two authors, and the "authornote" and "authornotemark" commands
+% used to denote shared contribution to the research.
+\author{Andrea Frasson}
+\email{a.frasson@studenti.unipi.it}
+\affiliation{%
+  \institution{Student ID: 657944}
+}
+
+\author{Lorenzo Zaffina}
+\email{l.zaffina@studenti.unipi.it}
+\affiliation{%
+  \institution{Student ID: 599849}
+}
+
+
+
+\renewcommand{\shortauthors}{Frasson and Zaffina}
+
+
+% The abstract is a short summary of the work to be presented in the article.
+\begin{abstract}
+
+The aim of this work is to study the network of members of the Italian Chamber of Deputies, analyzing relations based on voting behaviors. \\
+%We focus on the relations based on voting behaviors, and explore some basic aspects of the networks. \\
+In particular, we analyze data of the XVII and XVIII legislatures of the Italian Parliament.\\
+
+After a general description of the network, we focus our attention on communities emerging from voting similarities, asking ourselves how the distinction in parties actively influences voting behaviors.\\
+%We then try to develop a strategy to predict the formation of new links based on previous history of the network.\\
+We then analyse the network evolution over time, using monthly data as temporal snapshot to build a stream graph.\\
+Finally, we want to address the following open question: "Using voting data of the Chamber of Deputies, can we detect some signals pointing out to an imminent government crisis?".\footnote{
+{\bf Project Repositories}\\
+\noindent Data Collection: \url{https://github.com/sna-unipi/sna-2023-2023_frasson_zaffina/tree/main/data_collection}\\
+\noindent Analytical Tasks: \url{https://github.com/sna-unipi/sna-2023-2023_frasson_zaffina/tree/main}\\
+\noindent Report: \url{https://github.com/sna-unipi/sna-2023-2023_frasson_zaffina/tree/main/report}}
+\end{abstract}
+
+
+%
+% Keywords. The author(s) should pick words that accurately describe the work being
+% presented. Separate the keywords with commas.
+\keywords{Social Network Analysis, Community Detection, Italian Chamber of Deputies, Voting Behavior,  GNN}
+
+
+%
+% This command processes the author and affiliation and title information and builds
+% the first part of the formatted document.
+\begin{titlepage}
+    \maketitle
+\end{titlepage}
+
+
+\input{Chapters/1-Introduction}
+\input{Chapters/2-DataCollection}
+\input{Chapters/3-Network}
+\input{Chapters/4-Task}
+\input{Chapters/5-OpenQuestion}
+%\include{Chapters/6-Discussion}
+
+
+\clearpage
+% The next two lines define the bibliography style to be used, and the bibliography file.
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{biblio}
+
+\end{document}
